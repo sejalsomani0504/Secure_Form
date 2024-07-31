@@ -13,6 +13,7 @@ def home():
 @app.route('/extract', methods=['POST'])
 def extract():
     files = request.files.getlist('files')
+    print("files : ",files)
     results = [extract_text_from_pdf(file) for file in files]
     return jsonify(results)
 
