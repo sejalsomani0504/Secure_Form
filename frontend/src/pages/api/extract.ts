@@ -3,7 +3,7 @@ import axios from 'axios';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
-    const response = await axios.post('http://localhost:5000/extract', req.body, {
+    const response = await axios.post('http://localhost:5000/extract_form_data', req.body, {
       headers: {
         'Content-Type': 'multipart/form-data',
       },

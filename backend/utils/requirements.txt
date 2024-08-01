@@ -1,0 +1,7 @@
+Flask
+flask-cors
+pdfminer.six
+PyPDF2
+pytesseract
+Pillow
+pandas

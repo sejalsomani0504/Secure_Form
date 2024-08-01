@@ -2,6 +2,7 @@
 
 import { AnimatedTooltip } from "@/components/ui/animated-tooltip";
 import { FlipWords } from "@/components/ui/flip-words";
+import { SparklesCore } from "@/components/ui/sparkles";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -76,7 +77,7 @@ const HomePageCard : React.FC<HomePageOptionsProps> = ({name, link, libraryImage
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <div className="w-96 h-fit bg-[#7949FF] p-3 py-6 rounded-3xl">
+    <div className="w-96 h-fit bg-[#3873D8]/40 p-3 py-6 rounded-3xl">
       <div className="flex flex-row justify-center items-center pb-2">
         <div className="flex flex-row justify-between items-center w-[85%]">
           <h2 className="text-[30px] font-semibold">{name}</h2>
@@ -132,6 +133,18 @@ export default function Home() {
         <br />
         files easily
       </h1>
+      <div className="w-[40rem] relative -mt-20 -mb-8">
+        <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-[2px] w-3/4 blur-sm" />
+        <SparklesCore
+          background="transparent"
+          minSize={0.4}
+          maxSize={1}
+          particleDensity={1200}
+          className="w-full h-full"
+          particleColor="#FFFFFF"
+        />
+        <div className="absolute inset-0 w-full h-full bg-[#122547] [mask-image:radial-gradient(250px_120px_at_top,transparent_20%,white)]"></div>
+      </div>
       <div className="flex flex-row gap-48 max-md:flex-col">
         {allOptions.map((option, index) => (
           <HomePageCard
